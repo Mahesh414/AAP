@@ -1,25 +1,27 @@
-#---
-#- hosts: dbserver
-# become: yes
-# roles:
-#   - role: 'roles/HSC/monitoring'
-#     tags:
-#       - hold_HSC
-#   - role: 'roles/common/webtier'
-#   - role: 'roles/common/nginx_hardening'
-#     tags:
-#       - hold_common
 ---
 - hosts: dbserver
-  become: true
-  tasks:
-  - name: Install apache packages
-    yum:
-     name: httpd
-     state: present
+  become: yes
+  roles:
+   - role: 'roles/HSC/monitoring'
+     tags:
+       - hold_HSC
+   - role: 'roles/common/webtier'
+   - role: 'roles/common/nginx_hardening'
+     tags:
+       - hold_common
 
-  - name: Start httpd
-    service:
-     name: httpd
-     state: started
+
+#---
+#- hosts: dbserver
+#  become: true
+#  tasks:
+#  - name: Install apache packages
+#    yum:
+#     name: httpd
+#     state: present
+#
+#  - name: Start httpd
+#    service:
+#     name: httpd
+#     state: started
  
