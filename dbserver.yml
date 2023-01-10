@@ -26,7 +26,6 @@
   - name: Open port 80 for http access
     firewalld:
     service: http
-     permanent: true
      state: enabled
 
   - name: Restart firewalld service to load firewall changes
