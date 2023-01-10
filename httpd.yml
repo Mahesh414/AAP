@@ -1,5 +1,6 @@
 - name: Setup httpd and open firewall port
   hosts: dbserver
+  become: true
   tasks:
   - name: Install apache packages
     yum:
