@@ -1,5 +1,5 @@
 - name: Setup httpd and open firewall port
-  hosts: all
+  hosts: dbserver
   tasks:
   - name: Install apache packages
     yum:
