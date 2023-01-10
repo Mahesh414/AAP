@@ -22,13 +22,4 @@
     service:
      name: httpd
      state: started
-
-  - name: Open port 80 for http access
-    firewalld:
-    service: http
-     state: enabled
-
-  - name: Restart firewalld service to load firewall changes
-    service:
-     name: firewalld
-     state: reloaded 
+ 
