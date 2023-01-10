@@ -9,19 +9,3 @@
    - role: 'roles/common/nginx_hardening'
      tags:
        - hold_common
-
-
-#---
-#- hosts: dbserver
-#  become: true
-#  tasks:
-#  - name: Install apache packages
-#    yum:
-#     name: httpd
-#     state: present
-#
-#  - name: Start httpd
-#    service:
-#     name: httpd
-#     state: started
- 
