@@ -1,5 +1,5 @@
 - name: Setup httpd and open firewall port
-  hosts: dbserver
+  hosts: all
   become: true
   tasks:
   - name: Install apache packages
